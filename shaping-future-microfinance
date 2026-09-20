@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shaping Future Microfinance Pvt. Ltd.</title>
+
+<meta name="description"
+content="Shaping Future Microfinance Pvt. Ltd. - Empowering Dreams, Shaping Futures.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#172033;
+}
+
+/* NAVBAR */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#ffffff;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-box{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#0757b8,#13a4ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo-text h2{
+    font-size:18px;
+    color:#0757b8;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#666;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#0757b8;
+}
+
+.menu-btn{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:610px;
+    background:
+    linear-gradient(120deg,rgba(5,47,102,.94),rgba(0,126,190,.84)),
+    radial-gradient(circle at top right,#31b8ff,transparent 40%);
+    color:white;
+    display:flex;
+    align-items:center;
+}
+
+.hero-container{
+    width:1200px;
+    max-width:92%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#7de0ff;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    color:#e9f7ff;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:white;
+    color:#0757b8;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#0757b8;
+}
+
+.hero-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:30px;
+}
+
+.hero-card h3{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.hero-stat{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.hero-stat:last-child{
+    border-bottom:none;
+}
+
+/* SECTION */
+.section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#10244a;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#687386;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 8px 30px rgba(24,53,92,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:13px;
+    background:#e9f4ff;
+    color:#0757b8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:12px;
+    color:#10244a;
+}
+
+.card p{
+    color:#687386;
+    line-height:1.6;
+}
+
+/* ABOUT */
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-box{
+    padding:30px;
+    background:#f4f8ff;
+    border-left:5px solid #0757b8;
+    border-radius:10px;
+    line-height:1.8;
+}
+
+.check-list{
+    list-style:none;
+    margin-top:20px;
+}
+
+.check-list li{
+    margin:12px 0;
+    color:#4e5b6f;
+}
+
+.check-list li::before{
+    content:"✓";
+    color:#0a8f48;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* PLANS */
+.plans{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.plan{
+    background:white;
+    border-radius:16px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(24,53,92,.08);
+}
+
+.plan h3{
+    color:#0757b8;
+}
+
+.plan .rate{
+    font-size:38px;
+    font-weight:bold;
+    color:#10244a;
+    margin:20px 0;
+}
+
+.plan p{
+    color:#687386;
+}
+
+.note{
+    text-align:center;
+    margin-top:25px;
+    color:#687386;
+    font-size:13px;
+}
+
+/* LOGIN */
+.login-section{
+    background:#eef5fc;
+}
+
+.login-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.login-card{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 30px rgba(24,53,92,.09);
+}
+
+.login-card h3{
+    margin-bottom:8px;
+    color:#10244a;
+}
+
+.login-card small{
+    color:#778296;
+}
+
+.login-card form{
+    margin-top:22px;
+}
+
+.input{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid #d8e0eb;
+    border-radius:8px;
+    margin-bottom:13px;
+    outline:none;
+}
+
+.input:focus{
+    border-color:#0757b8;
+}
+
+.login-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    background:#0757b8;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.login-btn:hover{
+    background:#06468f;
+}
+
+.forgot{
+    display:block;
+    text-align:right;
+    margin-top:10px;
+    font-size:12px;
+    color:#0757b8;
+}
+
+/* DASHBOARD */
+.dashboard{
+    background:#10244a;
+    color:white;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.dash-box{
+    background:rgba(255,255,255,.1);
+    padding:25px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.dash-box h3{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.dash-box p{
+    color:#c9d8ec;
+}
+
+/* CONTACT */
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 30px rgba(24,53,92,.08);
+}
+
+.contact-item{
+    margin:20px 0;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:5px;
+    color:#10244a;
+}
+
+.contact-item a{
+    color:#0757b8;
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    background:#07162f;
+    color:#bfcce0;
+    padding:45px 20px 20px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer p{
+    line-height:1.7;
+    font-size:14px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:10px 0;
+}
+
+footer a{
+    color:#bfcce0;
+    text-decoration:none;
+}
+
+.copyright{
+    max-width:1200px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    font-size:12px;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal-box{
+    background:white;
+    width:450px;
+    max-width:100%;
+    border-radius:18px;
+    padding:30px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:25px;
+    cursor:pointer;
+    color:#555;
+}
+
+.modal-box h2{
+    color:#10244a;
+    margin-bottom:20px;
+}
+
+.modal-message{
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        background:white;
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-container,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:70px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .cards,
+    .plans,
+    .login-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .btn{
+        display:block;
+        margin:10px 0;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="nav-container">
+
+    <div class="logo">
+        <div class="logo-box">SF</div>
+
+        <div class="logo-text">
+            <h2>Shaping Future</h2>
+            <p>Microfinance Pvt. Ltd.</p>
+        </div>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div>
+    <p style="font-weight:bold;letter-spacing:2px;">
+        SHAPING FUTURE MICROFINANCE PVT. LTD.
+    </p>
+
+    <h1>
+        Empowering Dreams,<br>
+        <span>Shaping Futures.</span>
+    </h1>
+
+    <p>
+        Building financial access, responsible savings solutions
+        and technology-enabled services for individuals,
+        families and communities.
+    </p>
+
+    <a href="#plans" class="btn btn-primary">
+        Explore Plans
+    </a>
+
+    <a href="#login" class="btn btn-outline">
+        Member Login
+    </a>
+</div>
+
+
+<div class="hero-card">
+
+    <h3>Our Focus</h3>
+
+    <div class="hero-stat">
+        <span>Financial Access</span>
+        <strong>01</strong>
+    </div>
+
+    <div class="hero-stat">
+        <span>Customer Service</span>
+        <strong>02</strong>
+    </div>
+
+    <div class="hero-stat">
+        <span>Digital Operations</span>
+        <strong>03</strong>
+    </div>
+
+    <div class="hero-stat">
+        <span>Responsible Growth</span>
+        <strong>04</strong>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>About Shaping Future</h2>
+    <p>Technology, transparency and customer-focused financial services.</p>
+</div>
+
+<div class="about-grid">
+
+<div>
+    <div class="about-box">
+        <strong>Shaping Future Microfinance Pvt. Ltd.</strong>
+        is focused on creating accessible and technology-enabled
+        financial service infrastructure while maintaining
+        responsible operational practices.
+    </div>
+
+    <ul class="check-list">
+        <li>Customer-focused service model</li>
+        <li>Technology-enabled operations</li>
+        <li>Transparent documentation process</li>
+        <li>Structured staff and branch operations</li>
+        <li>Digital reporting and monitoring</li>
+    </ul>
+</div>
+
+
+<div>
+    <h2>Our Vision</h2>
+
+    <p style="margin-top:15px;line-height:1.8;color:#687386;">
+        To build a trusted financial service platform that
+        supports individuals and communities through accessible,
+        transparent and technology-driven services.
+    </p>
+
+    <br>
+
+    <h2>Our Mission</h2>
+
+    <p style="margin-top:15px;line-height:1.8;color:#687386;">
+        To combine technology, responsible operations and
+        customer service to create sustainable financial
+        solutions.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SERVICES -->
+<section class="section" id="services">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>Our Services</h2>
+    <p>Designed around customer convenience and operational efficiency.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+    <div class="icon">₹</div>
+    <h3>Financial Services</h3>
+    <p>
+        Structured financial service solutions with
+        customer-focused processes and documentation.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">▣</div>
+    <h3>Digital Operations</h3>
+    <p>
+        Digital customer records, staff reporting,
+        dashboards and technology-enabled workflows.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">✓</div>
+    <h3>Customer Support</h3>
+    <p>
+        Dedicated support systems designed to improve
+        communication and service experience.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PLANS -->
+<section class="section" id="plans">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>Indicative Savings Plans</h2>
+    <p>Illustrative rates — subject to applicable terms and approvals.</p>
+</div>
+
+<div class="plans">
+
+<div class="plan">
+    <h3>12 Months</h3>
+    <div class="rate">7%</div>
+    <p>Indicative annual rate</p>
+</div>
+
+<div class="plan">
+    <h3>24 Months</h3>
+    <div class="rate">8%</div>
+    <p>Indicative annual rate</p>
+</div>
+
+<div class="plan">
+    <h3>40 Months</h3>
+    <div class="rate">8.5%</div>
+    <p>Indicative annual rate</p>
+</div>
+
+</div>
+
+<p class="note">
+Rates shown are indicative for website demonstration.
+Actual products, rates, eligibility and terms should be
+published only after applicable regulatory and legal review.
+</p>
+
+</div>
+</section>
+
+
+<!-- DASHBOARD PREVIEW -->
+<section class="section dashboard">
+
+<div class="container">
+
+<div class="section-title">
+    <h2 style="color:white;">Digital Operations</h2>
+    <p style="color:#c9d8ec;">
+        Centralized monitoring for authorized users.
+    </p>
+</div>
+
+<div class="dashboard-grid">
+
+<div class="dash-box">
+    <h3>01</h3>
+    <p>Member Management</p>
+</div>
+
+<div class="dash-box">
+    <h3>02</h3>
+    <p>Staff Management</p>
+</div>
+
+<div class="dash-box">
+    <h3>03</h3>
+    <p>Reports & MIS</p>
+</div>
+
+<div class="dash-box">
+    <h3>04</h3>
+    <p>Management Dashboard</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- LOGIN -->
+<section class="section login-section" id="login">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>Secure Login</h2>
+    <p>Choose your authorized access portal.</p>
+</div>
+
+
+<div class="login-grid">
+
+<!-- MEMBER -->
+<div class="login-card">
+
+    <div class="icon">M</div>
+
+    <h3>Member Login</h3>
+
+    <small>
+        Access your member account
+    </small>
+
+    <form onsubmit="openLogin(event,'Member')">
+
+        <input
+        class="input"
+        type="text"
+        placeholder="Member ID"
+        required>
+
+        <input
+        class="input"
+        type="password"
+        placeholder="Password"
+        required>
+
+        <button class="login-btn">
+            Member Login
+        </button>
+
+    </form>
+
+    <a class="forgot">Forgot Password?</a>
+
+</div>
+
+
+<!-- STAFF -->
+<div class="login-card">
+
+    <div class="icon">S</div>
+
+    <h3>Staff Login</h3>
+
+    <small>
+        Staff & field operations
+    </small>
+
+    <form onsubmit="openLogin(event,'Staff')">
+
+        <input
+        class="input"
+        type="text"
+        placeholder="Staff ID"
+        required>
+
+        <input
+        class="input"
+        type="password"
+        placeholder="Password"
+        required>
+
+        <button class="login-btn">
+            Staff Login
+        </button>
+
+    </form>
+
+    <a class="forgot">Forgot Password?</a>
+
+</div>
+
+
+<!-- GM -->
+<div class="login-card">
+
+    <div class="icon">G</div>
+
+    <h3>GM / Management</h3>
+
+    <small>
+        Authorized management access
+    </small>
+
+    <form onsubmit="openLogin(event,'GM / Management')">
+
+        <input
+        class="input"
+        type="text"
+        placeholder="Management ID"
+        required>
+
+        <input
+        class="input"
+        type="password"
+        placeholder="Password"
+        required>
+
+        <button class="login-btn">
+            Management Login
+        </button>
+
+    </form>
+
+    <a class="forgot">Forgot Password?</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>Contact Us</h2>
+    <p>Connect with Shaping Future Microfinance.</p>
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+    <h2>Shaping Future Microfinance Pvt. Ltd.</h2>
+
+    <div class="contact-item">
+        <strong>Email</strong>
+        <a href="mailto:shapingfuture22@gmail.com">
+            shapingfuture22@gmail.com
+        </a>
+    </div>
+
+    <div class="contact-item">
+        <strong>Website</strong>
+        <span>Official company website</span>
+    </div>
+
+    <div class="contact-item">
+        <strong>Business Hours</strong>
+        <span>Monday – Saturday</span>
+    </div>
+
+</div>
+
+
+<div class="contact-card">
+
+    <h2>Send an Enquiry</h2>
+
+    <form onsubmit="sendEnquiry(event)">
+
+        <input
+        class="input"
+        type="text"
+        placeholder="Full Name"
+        required>
+
+        <input
+        class="input"
+        type="email"
+        placeholder="Email Address"
+        required>
+
+        <input
+        class="input"
+        type="tel"
+        placeholder="Mobile Number"
+        required>
+
+        <textarea
+        class="input"
+        rows="5"
+        placeholder="Your Message"
+        required></textarea>
+
+        <button class="login-btn">
+            Send Enquiry
+        </button>
+
+    </form>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-grid">
+
+<div>
+    <h3>Shaping Future</h3>
+
+    <p>
+        Empowering Dreams, Shaping Futures.
+        Technology-enabled financial service
+        infrastructure focused on responsible
+        customer service.
+    </p>
+</div>
+
+
+<div>
+    <h3>Quick Links</h3>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+
+<div>
+    <h3>Contact</h3>
+
+    <p>
+        Email:
+        <a href="mailto:shapingfuture22@gmail.com">
+            shapingfuture22@gmail.com
+        </a>
+    </p>
+</div>
+
+</div>
+
+
+<div class="copyright">
+    © 2026 Shaping Future Microfinance Pvt. Ltd.
+    All Rights Reserved.
+</div>
+
+</footer>
+
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+
+<div class="modal-box">
+
+    <span class="close" onclick="closeModal()">×</span>
+
+    <h2 id="modalTitle">
+        Login
+    </h2>
+
+    <p style="color:#687386;line-height:1.6;">
+        This is the front-end login interface.
+        Connect it with your secure backend/database
+        before using it for real accounts.
+    </p>
+
+    <div class="modal-message">
+        Secure authentication system required.
+    </div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+
+/* LOGIN */
+
+function openLogin(event,type){
+
+    event.preventDefault();
+
+    document
+    .getElementById("modalTitle")
+    .innerText = type + " Login";
+
+    document
+    .getElementById("loginModal")
+    .style.display = "flex";
+}
+
+
+function closeModal(){
+
+    document
+    .getElementById("loginModal")
+    .style.display = "none";
+
+}
+
+
+window.onclick=function(event){
+
+    let modal=document.getElementById("loginModal");
+
+    if(event.target===modal){
+        closeModal();
+    }
+
+}
+
+
+/* CONTACT */
+
+function sendEnquiry(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting Shaping Future Microfinance. " +
+        "Please email us at shapingfuture22@gmail.com."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
