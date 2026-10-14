@@ -1,1232 +1,870 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Shaping Future Microfinance Pvt. Ltd.</title>
-
-<meta name="description"
-content="Shaping Future Microfinance Pvt. Ltd. - Empowering Dreams, Shaping Futures.">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f5f7fb;
-    color:#172033;
-}
-
-/* NAVBAR */
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#ffffff;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
-}
-
-.nav-container{
-    max-width:1200px;
-    margin:auto;
-    padding:14px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo-box{
-    width:48px;
-    height:48px;
-    border-radius:12px;
-    background:linear-gradient(135deg,#0757b8,#13a4ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.logo-text h2{
-    font-size:18px;
-    color:#0757b8;
-}
-
-.logo-text p{
-    font-size:11px;
-    color:#666;
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#333;
-    font-size:14px;
-    font-weight:600;
-}
-
-.nav-links a:hover{
-    color:#0757b8;
-}
-
-.menu-btn{
-    display:none;
-    font-size:25px;
-    cursor:pointer;
-}
-
-/* HERO */
-.hero{
-    min-height:610px;
-    background:
-    linear-gradient(120deg,rgba(5,47,102,.94),rgba(0,126,190,.84)),
-    radial-gradient(circle at top right,#31b8ff,transparent 40%);
-    color:white;
-    display:flex;
-    align-items:center;
-}
-
-.hero-container{
-    width:1200px;
-    max-width:92%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:50px;
-    align-items:center;
-}
-
-.hero h1{
-    font-size:52px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:#7de0ff;
-}
-
-.hero p{
-    font-size:18px;
-    line-height:1.7;
-    color:#e9f7ff;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-right:10px;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:white;
-    color:#0757b8;
-}
-
-.btn-primary:hover{
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    border:1px solid white;
-    color:white;
-}
-
-.btn-outline:hover{
-    background:white;
-    color:#0757b8;
-}
-
-.hero-card{
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,.2);
-    border-radius:20px;
-    padding:30px;
-}
-
-.hero-card h3{
-    font-size:24px;
-    margin-bottom:20px;
-}
-
-.hero-stat{
-    display:flex;
-    justify-content:space-between;
-    padding:15px 0;
-    border-bottom:1px solid rgba(255,255,255,.2);
-}
-
-.hero-stat:last-child{
-    border-bottom:none;
-}
-
-/* SECTION */
-.section{
-    padding:80px 20px;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:34px;
-    color:#10244a;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:#687386;
-}
-
-/* CARDS */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 8px 30px rgba(24,53,92,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-}
-
-.icon{
-    width:55px;
-    height:55px;
-    border-radius:13px;
-    background:#e9f4ff;
-    color:#0757b8;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:24px;
-    margin-bottom:20px;
-}
-
-.card h3{
-    margin-bottom:12px;
-    color:#10244a;
-}
-
-.card p{
-    color:#687386;
-    line-height:1.6;
-}
-
-/* ABOUT */
-.about{
-    background:white;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.about-box{
-    padding:30px;
-    background:#f4f8ff;
-    border-left:5px solid #0757b8;
-    border-radius:10px;
-    line-height:1.8;
-}
-
-.check-list{
-    list-style:none;
-    margin-top:20px;
-}
-
-.check-list li{
-    margin:12px 0;
-    color:#4e5b6f;
-}
-
-.check-list li::before{
-    content:"✓";
-    color:#0a8f48;
-    font-weight:bold;
-    margin-right:10px;
-}
-
-/* PLANS */
-.plans{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.plan{
-    background:white;
-    border-radius:16px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 8px 30px rgba(24,53,92,.08);
-}
-
-.plan h3{
-    color:#0757b8;
-}
-
-.plan .rate{
-    font-size:38px;
-    font-weight:bold;
-    color:#10244a;
-    margin:20px 0;
-}
-
-.plan p{
-    color:#687386;
-}
-
-.note{
-    text-align:center;
-    margin-top:25px;
-    color:#687386;
-    font-size:13px;
-}
-
-/* LOGIN */
-.login-section{
-    background:#eef5fc;
-}
-
-.login-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.login-card{
-    background:white;
-    border-radius:18px;
-    padding:30px;
-    box-shadow:0 8px 30px rgba(24,53,92,.09);
-}
-
-.login-card h3{
-    margin-bottom:8px;
-    color:#10244a;
-}
-
-.login-card small{
-    color:#778296;
-}
-
-.login-card form{
-    margin-top:22px;
-}
-
-.input{
-    width:100%;
-    padding:13px 14px;
-    border:1px solid #d8e0eb;
-    border-radius:8px;
-    margin-bottom:13px;
-    outline:none;
-}
-
-.input:focus{
-    border-color:#0757b8;
-}
-
-.login-btn{
-    width:100%;
-    padding:13px;
-    border:none;
-    background:#0757b8;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.login-btn:hover{
-    background:#06468f;
-}
-
-.forgot{
-    display:block;
-    text-align:right;
-    margin-top:10px;
-    font-size:12px;
-    color:#0757b8;
-}
-
-/* DASHBOARD */
-.dashboard{
-    background:#10244a;
-    color:white;
-}
-
-.dashboard-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.dash-box{
-    background:rgba(255,255,255,.1);
-    padding:25px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.12);
-}
-
-.dash-box h3{
-    font-size:28px;
-    margin-bottom:5px;
-}
-
-.dash-box p{
-    color:#c9d8ec;
-}
-
-/* CONTACT */
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.contact-card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 8px 30px rgba(24,53,92,.08);
-}
-
-.contact-item{
-    margin:20px 0;
-}
-
-.contact-item strong{
-    display:block;
-    margin-bottom:5px;
-    color:#10244a;
-}
-
-.contact-item a{
-    color:#0757b8;
-    text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-    background:#07162f;
-    color:#bfcce0;
-    padding:45px 20px 20px;
-}
-
-.footer-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:40px;
-}
-
-footer h3{
-    color:white;
-    margin-bottom:15px;
-}
-
-footer p{
-    line-height:1.7;
-    font-size:14px;
-}
-
-footer ul{
-    list-style:none;
-}
-
-footer li{
-    margin:10px 0;
-}
-
-footer a{
-    color:#bfcce0;
-    text-decoration:none;
-}
-
-.copyright{
-    max-width:1200px;
-    margin:30px auto 0;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.1);
-    text-align:center;
-    font-size:12px;
-}
-
-/* MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    z-index:2000;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.modal-box{
-    background:white;
-    width:450px;
-    max-width:100%;
-    border-radius:18px;
-    padding:30px;
-    position:relative;
-}
-
-.close{
-    position:absolute;
-    right:20px;
-    top:15px;
-    font-size:25px;
-    cursor:pointer;
-    color:#555;
-}
-
-.modal-box h2{
-    color:#10244a;
-    margin-bottom:20px;
-}
-
-.modal-message{
-    margin-top:15px;
-    text-align:center;
-    font-size:13px;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-
-    .nav-links{
-        display:none;
-        position:absolute;
-        top:76px;
-        left:0;
-        right:0;
-        background:white;
-        flex-direction:column;
-        padding:20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shaping Future Microfinance Pvt. Ltd.</title>
+
+  <meta name="description"
+        content="Shaping Future Microfinance Pvt. Ltd. - SHG services, financial awareness, career opportunities and customer support.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    .nav-links.active{
-        display:flex;
+    :root {
+      --primary: #073b75;
+      --secondary: #0879d9;
+      --light: #f3f7fc;
+      --dark: #172b45;
+      --white: #ffffff;
     }
 
-    .menu-btn{
-        display:block;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background: var(--white);
     }
 
-    .hero-container,
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
+    header {
+      background: var(--white);
+      padding: 14px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 2px 12px #00000012;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .hero{
-        padding:70px 0;
+    .logo {
+      color: var(--primary);
+      font-size: 21px;
+      font-weight: bold;
     }
 
-    .hero h1{
-        font-size:40px;
+    .logo small {
+      display: block;
+      font-size: 11px;
+      color: #52677e;
+      letter-spacing: 1px;
     }
 
-    .cards,
-    .plans,
-    .login-grid{
-        grid-template-columns:1fr;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
     }
 
-    .dashboard-grid{
-        grid-template-columns:1fr 1fr;
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
     }
 
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:500px){
-
-    .hero h1{
-        font-size:34px;
+    nav a:hover {
+      color: var(--secondary);
     }
 
-    .dashboard-grid{
-        grid-template-columns:1fr;
+    .lang-btn, .btn {
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 11px 17px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    .btn{
-        display:block;
-        margin:10px 0;
-        text-align:center;
+    .lang-btn {
+      background: #e7f1ff;
+      color: var(--primary);
     }
-}
-</style>
+
+    .btn-primary {
+      background: var(--secondary);
+      color: var(--white);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 90px 8%;
+      background: linear-gradient(120deg, #073b75, #0879d9);
+      color: var(--white);
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 53px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 28px;
+      max-width: 680px;
+    }
+
+    section {
+      padding: 65px 7%;
+      scroll-margin-top: 95px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--primary);
+      font-size: 31px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 35px;
+      color: #596a7d;
+    }
+
+    .about {
+      background: var(--light);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 27px;
+      border-radius: 12px;
+      box-shadow: 0 5px 22px #12345612;
+      border: 1px solid #e6edf5;
+    }
+
+    .card .symbol {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #596a7d;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      background: #eaf4ff;
+      border-left: 5px solid var(--secondary);
+      padding: 22px;
+      border-radius: 6px;
+      margin-top: 25px;
+    }
+
+    .steps {
+      padding-left: 22px;
+    }
+
+    .steps li {
+      margin: 10px 0;
+    }
+
+    .careers {
+      background: var(--light);
+    }
+
+    form {
+      max-width: 750px;
+      margin: 25px auto 0;
+      background: var(--white);
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 5px 22px #12345612;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccd7e4;
+      border-radius: 6px;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 13px;
+      color: #596a7d;
+      margin: 12px 0;
+    }
+
+    .form-status {
+      margin-top: 14px;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    .contact {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .contact .section-title {
+      color: var(--white);
+    }
+
+    .contact .section-intro {
+      color: #e1edff;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-box a {
+      color: var(--white);
+    }
+
+    footer {
+      padding: 25px 7%;
+      background: #06284f;
+      color: var(--white);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    .disclaimer {
+      font-size: 13px;
+      color: #68798b;
+      margin-top: 22px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        position: static;
+      }
+
+      nav {
+        width: 100%;
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 60px 7%;
+      }
+
+      section {
+        padding: 45px 6%;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-<div class="nav-container">
+<header>
+  <div class="logo">
+    Shaping Future
+    <small>MICROFINANCE PVT. LTD.</small>
+  </div>
 
-    <div class="logo">
-        <div class="logo-box">SF</div>
+  <nav aria-label="Main navigation">
+    <a href="#home" data-en="Home" data-hi="होम">Home</a>
+    <a href="#about" data-en="About Us" data-hi="हमारे बारे में">About Us</a>
+    <a href="#services" data-en="Services" data-hi="सेवाएँ">Services</a>
+    <a href="#shg" data-en="SHG & Loans" data-hi="एसएचजी और ऋण">SHG & Loans</a>
+    <a href="#careers" data-en="Careers" data-hi="करियर">Careers</a>
+    <a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
+    <button class="lang-btn" id="languageButton"
+            type="button" onclick="toggleLanguage()">
+      हिन्दी
+    </button>
+  </nav>
+</header>
 
-        <div class="logo-text">
-            <h2>Shaping Future</h2>
-            <p>Microfinance Pvt. Ltd.</p>
-        </div>
+<main>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 data-en="Empowering Communities. Shaping a Better Future."
+          data-hi="समुदायों को सशक्त बनाना, बेहतर भविष्य बनाना।">
+        Empowering Communities. Shaping a Better Future.
+      </h1>
+
+      <p data-en="Supporting financial awareness, community development and responsible financial inclusion through a people-focused approach."
+         data-hi="लोगों को केंद्र में रखकर वित्तीय जागरूकता, सामुदायिक विकास और जिम्मेदार वित्तीय समावेशन को बढ़ावा देना।">
+        Supporting financial awareness, community development and
+        responsible financial inclusion through a people-focused approach.
+      </p>
+
+      <a class="btn btn-light" href="#about"
+         data-en="Explore Our Company" data-hi="हमारी कंपनी जानें">
+        Explore Our Company
+      </a>
+
+      <a class="btn btn-primary" href="#contact"
+         data-en="Contact Us" data-hi="संपर्क करें">
+        Contact Us
+      </a>
     </div>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#plans">Plans</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#login">Login</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-</div>
-</nav>
-
-
-<!-- HERO -->
-<section class="hero" id="home">
-
-<div class="hero-container">
-
-<div>
-    <p style="font-weight:bold;letter-spacing:2px;">
-        SHAPING FUTURE MICROFINANCE PVT. LTD.
-    </p>
-
-    <h1>
-        Empowering Dreams,<br>
-        <span>Shaping Futures.</span>
-    </h1>
-
-    <p>
-        Building financial access, responsible savings solutions
-        and technology-enabled services for individuals,
-        families and communities.
-    </p>
-
-    <a href="#plans" class="btn btn-primary">
-        Explore Plans
-    </a>
-
-    <a href="#login" class="btn btn-outline">
-        Member Login
-    </a>
-</div>
-
-
-<div class="hero-card">
-
-    <h3>Our Focus</h3>
-
-    <div class="hero-stat">
-        <span>Financial Access</span>
-        <strong>01</strong>
-    </div>
-
-    <div class="hero-stat">
-        <span>Customer Service</span>
-        <strong>02</strong>
-    </div>
-
-    <div class="hero-stat">
-        <span>Digital Operations</span>
-        <strong>03</strong>
-    </div>
-
-    <div class="hero-stat">
-        <span>Responsible Growth</span>
-        <strong>04</strong>
-    </div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ABOUT -->
-<section class="section about" id="about">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>About Shaping Future</h2>
-    <p>Technology, transparency and customer-focused financial services.</p>
-</div>
-
-<div class="about-grid">
-
-<div>
-    <div class="about-box">
-        <strong>Shaping Future Microfinance Pvt. Ltd.</strong>
-        is focused on creating accessible and technology-enabled
-        financial service infrastructure while maintaining
-        responsible operational practices.
-    </div>
-
-    <ul class="check-list">
-        <li>Customer-focused service model</li>
-        <li>Technology-enabled operations</li>
-        <li>Transparent documentation process</li>
-        <li>Structured staff and branch operations</li>
-        <li>Digital reporting and monitoring</li>
-    </ul>
-</div>
-
-
-<div>
-    <h2>Our Vision</h2>
-
-    <p style="margin-top:15px;line-height:1.8;color:#687386;">
-        To build a trusted financial service platform that
-        supports individuals and communities through accessible,
-        transparent and technology-driven services.
-    </p>
-
-    <br>
-
-    <h2>Our Mission</h2>
-
-    <p style="margin-top:15px;line-height:1.8;color:#687386;">
-        To combine technology, responsible operations and
-        customer service to create sustainable financial
-        solutions.
-    </p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- SERVICES -->
-<section class="section" id="services">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>Our Services</h2>
-    <p>Designed around customer convenience and operational efficiency.</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-    <div class="icon">₹</div>
-    <h3>Financial Services</h3>
-    <p>
-        Structured financial service solutions with
-        customer-focused processes and documentation.
-    </p>
-</div>
-
-<div class="card">
-    <div class="icon">▣</div>
-    <h3>Digital Operations</h3>
-    <p>
-        Digital customer records, staff reporting,
-        dashboards and technology-enabled workflows.
-    </p>
-</div>
-
-<div class="card">
-    <div class="icon">✓</div>
-    <h3>Customer Support</h3>
-    <p>
-        Dedicated support systems designed to improve
-        communication and service experience.
-    </p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- PLANS -->
-<section class="section" id="plans">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>Indicative Savings Plans</h2>
-    <p>Illustrative rates — subject to applicable terms and approvals.</p>
-</div>
-
-<div class="plans">
-
-<div class="plan">
-    <h3>12 Months</h3>
-    <div class="rate">7%</div>
-    <p>Indicative annual rate</p>
-</div>
-
-<div class="plan">
-    <h3>24 Months</h3>
-    <div class="rate">8%</div>
-    <p>Indicative annual rate</p>
-</div>
-
-<div class="plan">
-    <h3>40 Months</h3>
-    <div class="rate">8.5%</div>
-    <p>Indicative annual rate</p>
-</div>
-
-</div>
-
-<p class="note">
-Rates shown are indicative for website demonstration.
-Actual products, rates, eligibility and terms should be
-published only after applicable regulatory and legal review.
-</p>
-
-</div>
-</section>
-
-
-<!-- DASHBOARD PREVIEW -->
-<section class="section dashboard">
-
-<div class="container">
-
-<div class="section-title">
-    <h2 style="color:white;">Digital Operations</h2>
-    <p style="color:#c9d8ec;">
-        Centralized monitoring for authorized users.
-    </p>
-</div>
-
-<div class="dashboard-grid">
-
-<div class="dash-box">
-    <h3>01</h3>
-    <p>Member Management</p>
-</div>
-
-<div class="dash-box">
-    <h3>02</h3>
-    <p>Staff Management</p>
-</div>
-
-<div class="dash-box">
-    <h3>03</h3>
-    <p>Reports & MIS</p>
-</div>
-
-<div class="dash-box">
-    <h3>04</h3>
-    <p>Management Dashboard</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- LOGIN -->
-<section class="section login-section" id="login">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>Secure Login</h2>
-    <p>Choose your authorized access portal.</p>
-</div>
-
-
-<div class="login-grid">
-
-<!-- MEMBER -->
-<div class="login-card">
-
-    <div class="icon">M</div>
-
-    <h3>Member Login</h3>
-
-    <small>
-        Access your member account
-    </small>
-
-    <form onsubmit="openLogin(event,'Member')">
-
-        <input
-        class="input"
-        type="text"
-        placeholder="Member ID"
-        required>
-
-        <input
-        class="input"
-        type="password"
-        placeholder="Password"
-        required>
-
-        <button class="login-btn">
-            Member Login
-        </button>
-
-    </form>
-
-    <a class="forgot">Forgot Password?</a>
-
-</div>
-
-
-<!-- STAFF -->
-<div class="login-card">
-
-    <div class="icon">S</div>
-
-    <h3>Staff Login</h3>
-
-    <small>
-        Staff & field operations
-    </small>
-
-    <form onsubmit="openLogin(event,'Staff')">
-
-        <input
-        class="input"
-        type="text"
-        placeholder="Staff ID"
-        required>
-
-        <input
-        class="input"
-        type="password"
-        placeholder="Password"
-        required>
-
-        <button class="login-btn">
-            Staff Login
-        </button>
-
-    </form>
-
-    <a class="forgot">Forgot Password?</a>
-
-</div>
-
-
-<!-- GM -->
-<div class="login-card">
-
-    <div class="icon">G</div>
-
-    <h3>GM / Management</h3>
-
-    <small>
-        Authorized management access
-    </small>
-
-    <form onsubmit="openLogin(event,'GM / Management')">
-
-        <input
-        class="input"
-        type="text"
-        placeholder="Management ID"
-        required>
-
-        <input
-        class="input"
-        type="password"
-        placeholder="Password"
-        required>
-
-        <button class="login-btn">
-            Management Login
-        </button>
-
-    </form>
-
-    <a class="forgot">Forgot Password?</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-
-<div class="container">
-
-<div class="section-title">
-    <h2>Contact Us</h2>
-    <p>Connect with Shaping Future Microfinance.</p>
-</div>
-
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-    <h2>Shaping Future Microfinance Pvt. Ltd.</h2>
-
-    <div class="contact-item">
-        <strong>Email</strong>
-        <a href="mailto:shapingfuture22@gmail.com">
-            shapingfuture22@gmail.com
-        </a>
-    </div>
-
-    <div class="contact-item">
-        <strong>Website</strong>
-        <span>Official company website</span>
-    </div>
-
-    <div class="contact-item">
-        <strong>Business Hours</strong>
-        <span>Monday – Saturday</span>
-    </div>
-
-</div>
-
-
-<div class="contact-card">
-
-    <h2>Send an Enquiry</h2>
-
-    <form onsubmit="sendEnquiry(event)">
-
-        <input
-        class="input"
-        type="text"
-        placeholder="Full Name"
-        required>
-
-        <input
-        class="input"
-        type="email"
-        placeholder="Email Address"
-        required>
-
-        <input
-        class="input"
-        type="tel"
-        placeholder="Mobile Number"
-        required>
-
-        <textarea
-        class="input"
-        rows="5"
-        placeholder="Your Message"
-        required></textarea>
-
-        <button class="login-btn">
-            Send Enquiry
-        </button>
-
-    </form>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-<div class="footer-grid">
-
-<div>
-    <h3>Shaping Future</h3>
-
-    <p>
-        Empowering Dreams, Shaping Futures.
-        Technology-enabled financial service
-        infrastructure focused on responsible
-        customer service.
-    </p>
-</div>
-
-
-<div>
-    <h3>Quick Links</h3>
-
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#plans">Plans</a></li>
-        <li><a href="#login">Login</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</div>
-
-
-<div>
-    <h3>Contact</h3>
-
-    <p>
-        Email:
-        <a href="mailto:shapingfuture22@gmail.com">
-            shapingfuture22@gmail.com
-        </a>
-    </p>
-</div>
-
-</div>
-
-
-<div class="copyright">
-    © 2026 Shaping Future Microfinance Pvt. Ltd.
-    All Rights Reserved.
-</div>
-
-</footer>
-
-
-<!-- LOGIN MODAL -->
-<div class="modal" id="loginModal">
-
-<div class="modal-box">
-
-    <span class="close" onclick="closeModal()">×</span>
-
-    <h2 id="modalTitle">
-        Login
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="section-title"
+        data-en="About Shaping Future"
+        data-hi="शेपिंग फ्यूचर के बारे में">
+      About Shaping Future
     </h2>
 
-    <p style="color:#687386;line-height:1.6;">
-        This is the front-end login interface.
-        Connect it with your secure backend/database
-        before using it for real accounts.
+    <p class="section-intro"
+       data-en="We aim to support communities with accessible information, transparent communication and responsible financial practices."
+       data-hi="हम सुलभ जानकारी, पारदर्शी संवाद और जिम्मेदार वित्तीय प्रक्रियाओं के माध्यम से समुदायों को सहयोग देने का उद्देश्य रखते हैं।">
+      We aim to support communities with accessible information,
+      transparent communication and responsible financial practices.
     </p>
 
-    <div class="modal-message">
-        Secure authentication system required.
+    <div class="cards">
+      <article class="card">
+        <div class="symbol">🎯</div>
+        <h3 data-en="Our Mission" data-hi="हमारा मिशन">Our Mission</h3>
+        <p data-en="To encourage financial awareness, responsible decisions and community participation."
+           data-hi="वित्तीय जागरूकता, जिम्मेदार निर्णय और सामुदायिक भागीदारी को प्रोत्साहित करना।">
+          To encourage financial awareness, responsible decisions
+          and community participation.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="symbol">🤝</div>
+        <h3 data-en="Our Approach" data-hi="हमारा दृष्टिकोण">Our Approach</h3>
+        <p data-en="We value transparency, respectful service, accountability and clear communication."
+           data-hi="हम पारदर्शिता, सम्मानजनक सेवा, जवाबदेही और स्पष्ट संवाद को महत्व देते हैं।">
+          We value transparency, respectful service, accountability
+          and clear communication.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="symbol">🌱</div>
+        <h3 data-en="Community Development" data-hi="सामुदायिक विकास">
+          Community Development
+        </h3>
+        <p data-en="We seek to promote financial literacy and community-led development."
+           data-hi="हम वित्तीय साक्षरता और समुदाय के नेतृत्व वाले विकास को बढ़ावा देना चाहते हैं।">
+          We seek to promote financial literacy and community-led development.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="section-title"
+        data-en="Our Services" data-hi="हमारी सेवाएँ">
+      Our Services
+    </h2>
+
+    <p class="section-intro"
+       data-en="Explore our community and financial-service information. Actual products, eligibility and terms must be confirmed with the company."
+       data-hi="हमारी सामुदायिक और वित्तीय सेवाओं की जानकारी देखें। वास्तविक उत्पादों, पात्रता और शर्तों की पुष्टि कंपनी से करें।">
+      Explore our community and financial-service information.
+      Actual products, eligibility and terms must be confirmed with the company.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <div class="symbol">👥</div>
+        <h3 data-en="SHG Support" data-hi="एसएचजी सहयोग">SHG Support</h3>
+        <p data-en="Information about Self-Help Groups, group participation and financial awareness."
+           data-hi="स्वयं सहायता समूहों, समूह में भागीदारी और वित्तीय जागरूकता की जानकारी।">
+          Information about Self-Help Groups, group participation
+          and financial awareness.
+        </p>
+        <a href="#shg" data-en="Learn More" data-hi="और जानें">Learn More</a>
+      </article>
+
+      <article class="card">
+        <div class="symbol">💳</div>
+        <h3 data-en="Loan Information" data-hi="ऋण संबंधी जानकारी">
+          Loan Information
+        </h3>
+        <p data-en="Understand application steps, eligibility checks, repayment obligations and terms."
+           data-hi="आवेदन प्रक्रिया, पात्रता जाँच, पुनर्भुगतान की जिम्मेदारियों और शर्तों को समझें।">
+          Understand application steps, eligibility checks,
+          repayment obligations and terms.
+        </p>
+        <a href="#shg" data-en="Learn More" data-hi="और जानें">Learn More</a>
+      </article>
+
+      <article class="card">
+        <div class="symbol">📚</div>
+        <h3 data-en="Financial Awareness" data-hi="वित्तीय जागरूकता">
+          Financial Awareness
+        </h3>
+        <p data-en="Learn about budgeting, saving habits, responsible borrowing and fraud prevention."
+           data-hi="बजट, बचत की आदतों, जिम्मेदार उधार और धोखाधड़ी से बचाव के बारे में जानें।">
+          Learn about budgeting, saving habits, responsible borrowing
+          and fraud prevention.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="symbol">💼</div>
+        <h3 data-en="Career Opportunities" data-hi="नौकरी के अवसर">
+          Career Opportunities
+        </h3>
+        <p data-en="Explore opportunities in field operations, member services and administration."
+           data-hi="फील्ड ऑपरेशंस, सदस्य सेवाओं और प्रशासन में अवसरों की जानकारी पाएँ।">
+          Explore opportunities in field operations, member services
+          and administration.
+        </p>
+        <a href="#careers" data-en="Apply Now" data-hi="आवेदन करें">Apply Now</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- SHG & LOANS -->
+  <section class="about" id="shg">
+    <h2 class="section-title"
+        data-en="SHG & Loan Process" data-hi="एसएचजी और ऋण प्रक्रिया">
+      SHG & Loan Process
+    </h2>
+
+    <p class="section-intro"
+       data-en="General information to help applicants understand the process. Final eligibility and approval depend on company policy and applicable regulations."
+       data-hi="आवेदकों को प्रक्रिया समझाने के लिए सामान्य जानकारी। अंतिम पात्रता और स्वीकृति कंपनी की नीति और लागू नियमों पर निर्भर करेगी।">
+      General information to help applicants understand the process.
+      Final eligibility and approval depend on company policy and applicable regulations.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3 data-en="1. Enquiry" data-hi="1. पूछताछ">1. Enquiry</h3>
+        <p data-en="Contact the company to learn about available services and service locations."
+           data-hi="उपलब्ध सेवाओं और सेवा क्षेत्रों की जानकारी के लिए कंपनी से संपर्क करें।">
+          Contact the company to learn about available services and service locations.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 data-en="2. Eligibility Review" data-hi="2. पात्रता की जाँच">
+          2. Eligibility Review
+        </h3>
+        <p data-en="The company may review applicant information and required documents according to its policy."
+           data-hi="कंपनी अपनी नीति के अनुसार आवेदक की जानकारी और आवश्यक दस्तावेजों की जाँच कर सकती है।">
+          The company may review applicant information and required documents
+          according to its policy.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 data-en="3. Terms & Decision" data-hi="3. शर्तें और निर्णय">
+          3. Terms & Decision
+        </h3>
+        <p data-en="Review all charges, interest, repayment terms and documents before accepting any offer."
+           data-hi="किसी भी प्रस्ताव को स्वीकार करने से पहले सभी शुल्क, ब्याज, पुनर्भुगतान शर्तें और दस्तावेज़ पढ़ें।">
+          Review all charges, interest, repayment terms and documents
+          before accepting any offer.
+        </p>
+      </article>
     </div>
 
-</div>
+    <div class="highlight">
+      <strong data-en="Important Notice" data-hi="महत्वपूर्ण सूचना">
+        Important Notice
+      </strong>
+      <p data-en="This website is for general information and does not guarantee a loan, deposit facility or financial return. Services will be offered only where legally permitted and after applicable approvals. Never pay an unofficial agent."
+         data-hi="यह वेबसाइट सामान्य जानकारी के लिए है। यह ऋण, जमा सुविधा या वित्तीय लाभ की गारंटी नहीं देती। सेवाएँ केवल कानूनी अनुमति और आवश्यक स्वीकृतियों के बाद ही दी जाएँगी। किसी अनधिकृत एजेंट को भुगतान न करें।">
+        This website is for general information and does not guarantee
+        a loan, deposit facility or financial return. Services will be offered
+        only where legally permitted and after applicable approvals.
+        Never pay an unofficial agent.
+      </p>
+    </div>
+  </section>
 
-</div>
+  <!-- CAREERS -->
+  <section class="careers" id="careers">
+    <h2 class="section-title"
+        data-en="Careers at Shaping Future"
+        data-hi="शेपिंग फ्यूचर में करियर">
+      Careers at Shaping Future
+    </h2>
 
+    <p class="section-intro"
+       data-en="Interested in joining our team? Submit your details for recruitment follow-up."
+       data-hi="हमारी टीम से जुड़ना चाहते हैं? भर्ती संबंधी संपर्क के लिए अपनी जानकारी भेजें।">
+      Interested in joining our team? Submit your details for recruitment follow-up.
+    </p>
+
+    <form id="careerForm" onsubmit="submitForm(event, 'career')">
+      <div class="form-grid">
+        <div class="field">
+          <label for="jobName" data-en="Full Name" data-hi="पूरा नाम">
+            Full Name
+          </label>
+          <input id="jobName" name="name" required maxlength="100"
+                 autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="jobPhone" data-en="Mobile Number" data-hi="मोबाइल नंबर">
+            Mobile Number
+          </label>
+          <input id="jobPhone" name="phone" required
+                 type="tel" inputmode="tel"
+                 pattern="[0-9+() -]{8,20}" maxlength="20">
+        </div>
+
+        <div class="field">
+          <label for="jobEmail" data-en="Email Address" data-hi="ईमेल">
+            Email Address
+          </label>
+          <input id="jobEmail" name="email" type="email" required
+                 maxlength="150" autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label for="jobPosition" data-en="Position" data-hi="पद">
+            Position
+          </label>
+          <select id="jobPosition" name="position" required>
+            <option value="">Select Position</option>
+            <option>Relationship Officer - SHG</option>
+            <option>Field Officer</option>
+            <option>HR / Administration</option>
+            <option>Accounts / Finance</option>
+            <option>Branch / Operations</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="jobLocation" data-en="Preferred Location"
+                 data-hi="पसंदीदा स्थान">
+            Preferred Location
+          </label>
+          <input id="jobLocation" name="location" maxlength="150"
+                 placeholder="e.g. Patna, Lucknow">
+        </div>
+
+        <div class="field full">
+          <label for="jobMessage" data-en="Experience / Message"
+                 data-hi="अनुभव / संदेश">
+            Experience / Message
+          </label>
+          <textarea id="jobMessage" name="message" maxlength="2000"
+                    placeholder="Briefly describe your experience"></textarea>
+        </div>
+      </div>
+
+      <p class="form-note"
+         data-en="Please do not submit Aadhaar, bank details or other sensitive documents through this form."
+         data-hi="इस फॉर्म में आधार, बैंक विवरण या अन्य संवेदनशील दस्तावेज़ न भेजें।">
+        Please do not submit Aadhaar, bank details or other sensitive documents
+        through this form.
+      </p>
+
+      <button class="btn btn-primary" type="submit"
+              data-en="Submit Application" data-hi="आवेदन भेजें">
+        Submit Application
+      </button>
+
+      <p id="careerStatus" class="form-status" role="status"></p>
+    </form>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title"
+        data-en="Contact Us" data-hi="हमसे संपर्क करें">
+      Contact Us
+    </h2>
+
+    <p class="section-intro"
+       data-en="For general enquiries, company information and recruitment questions, contact our team."
+       data-hi="सामान्य पूछताछ, कंपनी की जानकारी और भर्ती संबंधी प्रश्नों के लिए हमारी टीम से संपर्क करें।">
+      For general enquiries, company information and recruitment questions,
+      contact our team.
+    </p>
+
+    <form id="contactForm" onsubmit="submitForm(event, 'contact')">
+      <div class="form-grid">
+        <div class="field">
+          <label for="contactName" data-en="Your Name" data-hi="आपका नाम">
+            Your Name
+          </label>
+          <input id="contactName" name="name" required maxlength="100">
+        </div>
+
+        <div class="field">
+          <label for="contactEmail" data-en="Email Address" data-hi="ईमेल">
+            Email Address
+          </label>
+          <input id="contactEmail" name="email" type="email"
+                 required maxlength="150">
+        </div>
+
+        <div class="field full">
+          <label for="contactSubject" data-en="Enquiry Type"
+                 data-hi="पूछताछ का प्रकार">
+            Enquiry Type
+          </label>
+          <select id="contactSubject" name="subject" required>
+            <option value="">Select an option</option>
+            <option>General Enquiry</option>
+            <option>SHG Information</option>
+            <option>Loan Information</option>
+            <option>Careers / Recruitment</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="contactMessage" data-en="Your Message"
+                 data-hi="आपका संदेश">
+            Your Message
+          </label>
+          <textarea id="contactMessage" name="message" required
+                    maxlength="3000"></textarea>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit"
+              data-en="Send Enquiry" data-hi="पूछताछ भेजें">
+        Send Enquiry
+      </button>
+
+      <p id="contactStatus" class="form-status" role="status"></p>
+    </form>
+  </section>
+
+  <!-- CONTACT DETAILS -->
+  <section class="contact">
+    <div class="contact-box">
+      <h2 class="section-title"
+          data-en="Get in Touch" data-hi="संपर्क जानकारी">
+        Get in Touch
+      </h2>
+
+      <p data-en="Shaping Future Microfinance Pvt. Ltd."
+         data-hi="शेपिंग फ्यूचर माइक्रोफाइनेंस प्राइवेट लिमिटेड">
+        Shaping Future Microfinance Pvt. Ltd.
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:shapingfuture22@gmail.com">
+          shapingfuture22@gmail.com
+        </a>
+      </p>
+
+      <p data-en="For official enquiries, please use the email address above."
+         data-hi="आधिकारिक पूछताछ के लिए ऊपर दिए गए ईमेल पते का उपयोग करें।">
+        For official enquiries, please use the email address above.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section id="privacy">
+    <h2 class="section-title"
+        data-en="Privacy Notice" data-hi="गोपनीयता सूचना">
+      Privacy Notice
+    </h2>
+
+    <p class="section-intro"
+       data-en="Information submitted through forms should be used only for the relevant enquiry or recruitment process, restricted to authorized personnel, and retained only as necessary. Do not submit sensitive personal or financial information."
+       data-hi="फॉर्म के माध्यम से प्राप्त जानकारी का उपयोग संबंधित पूछताछ या भर्ती प्रक्रिया के लिए ही किया जाना चाहिए। इसकी पहुँच अधिकृत व्यक्तियों तक सीमित रखें और आवश्यकता के अनुसार ही सुरक्षित रखें। संवेदनशील व्यक्तिगत या वित्तीय जानकारी न भेजें।">
+      Information submitted through forms should be used only for the relevant
+      enquiry or recruitment process, restricted to authorized personnel,
+      and retained only as necessary. Do not submit sensitive personal
+      or financial information.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    © <span id="year"></span>
+    Shaping Future Microfinance Pvt. Ltd.
+  </p>
+  <p>
+    <a href="#privacy" data-en="Privacy Notice" data-hi="गोपनीयता सूचना">
+      Privacy Notice
+    </a>
+  </p>
+  <p data-en="Website information does not constitute a financial offer or guarantee."
+     data-hi="वेबसाइट की जानकारी किसी वित्तीय प्रस्ताव या गारंटी के समान नहीं है।">
+    Website information does not constitute a financial offer or guarantee.
+  </p>
+</footer>
 
 <script>
+  /*
+    IMPORTANT:
+    Google Sheet integration is disabled until you add your
+    deployed Google Apps Script Web App URL below.
+  */
+  const GOOGLE_SCRIPT_URL = "";
 
-/* MOBILE MENU */
+  let currentLanguage = "en";
 
-function toggleMenu(){
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
 
-    document
-    .getElementById("navLinks")
-    .classList.toggle("active");
+  function toggleLanguage() {
+    currentLanguage = currentLanguage === "en" ? "hi" : "en";
 
-}
+    document.documentElement.lang = currentLanguage;
 
+    document.querySelectorAll("[data-en][data-hi]").forEach(function(el) {
+      el.textContent = el.getAttribute(
+        "data-" + currentLanguage
+      );
+    });
 
-/* LOGIN */
+    document.getElementById("languageButton").textContent =
+      currentLanguage === "en" ? "हिन्दी" : "English";
+  }
 
-function openLogin(event,type){
-
+  async function submitForm(event, type) {
     event.preventDefault();
 
-    document
-    .getElementById("modalTitle")
-    .innerText = type + " Login";
-
-    document
-    .getElementById("loginModal")
-    .style.display = "flex";
-}
-
-
-function closeModal(){
-
-    document
-    .getElementById("loginModal")
-    .style.display = "none";
-
-}
-
-
-window.onclick=function(event){
-
-    let modal=document.getElementById("loginModal");
-
-    if(event.target===modal){
-        closeModal();
-    }
-
-}
-
-
-/* CONTACT */
-
-function sendEnquiry(event){
-
-    event.preventDefault();
-
-    alert(
-        "Thank you for contacting Shaping Future Microfinance. " +
-        "Please email us at shapingfuture22@gmail.com."
+    const form = event.target;
+    const status = document.getElementById(
+      type === "career" ? "careerStatus" : "contactStatus"
     );
 
-}
+    if (!form.reportValidity()) return;
 
+    if (!GOOGLE_SCRIPT_URL) {
+      status.textContent =
+        "Form is not connected yet. Please configure the Google Apps Script URL.";
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    data.formType = type;
+    data.source = "Shaping Future Website";
+
+    const submitButton = form.querySelector(
+      'button[type="submit"]'
+    );
+
+    submitButton.disabled = true;
+    status.textContent = "Submitting...";
+
+    try {
+      /*
+        Apps Script Web Apps commonly accept this no-cors
+        submission pattern. The browser cannot verify the server's
+        response in no-cors mode, so success is not claimed here.
+        Verify each submission in the Google Sheet.
+      */
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(data)
+      });
+
+      status.textContent =
+        "Request sent. Please verify receipt with the company if needed.";
+
+      form.reset();
+
+    } catch (error) {
+      status.textContent =
+        "Submission could not be sent. Please email shapingfuture22@gmail.com.";
+
+    } finally {
+      submitButton.disabled = false;
+    }
+  }
 </script>
 
 </body>
